@@ -9,16 +9,15 @@
 <div class="container">
   <h2> A Simple ToDo List App </h2>
 
-  <form action ="/addtask" method="POST">
+  <form action ="/add" method="POST">
     <input type="text" name="newtask" placeholder="add new task">
-    <input type="text" name="completeTime" placeholder="complete by">
     <button> Add Task </button>
 
     <h2> Added Task </h2>
     <% for( var i = 0; i < task.length; i++){ %>
       <li><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %> </li>
     <% } %>
-    <button formaction="/removetask" type="submit" id="top"> Remove </button>
+    <button formaction="/remove" type="submit" id="top"> Remove </button>
   </form>
 
   <h2> Completed task </h2>
